@@ -12,4 +12,4 @@ jobs:
       issues: read
     steps:
       - name: print
-        run: echo ${{  github.event.pull_request.body }}
+        run: echo "${{ github.event.pull_request.body }}"
