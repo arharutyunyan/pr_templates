@@ -2,19 +2,14 @@ name: PR created or updated
 
 on:
   pull_request:
-    branches:
-      - main
-  issue_comment:
-    types:
-      - created
-      - edited
+    types: [opened]
 
 jobs:
   print_body:
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       issues: read
     steps:
       - name: print
-        run: echo ${{  github.event.comment }}
+        run: echo ${{  github.event.pull_request.body }}
