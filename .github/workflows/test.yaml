@@ -11,9 +11,9 @@ jobs:
       contents: read
       issues: read
     steps:
-      - name: print
-        run: echo "${{ github.event.pull_request.body }}"
-      - name: throw_error
+#      - name: print
+#        run: echo "${{ github.event.pull_request.body }}"
+      - name: All fields properly 
         run: |
-          echo "Please fill in all the required fields:
+          echo "Please fill in all the required fields."
           exit 1
