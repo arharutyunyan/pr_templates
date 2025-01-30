@@ -5,15 +5,15 @@ on:
     types: [opened]
 
 jobs:
-  print_body:
+  check_rap_fields:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       issues: read
     steps:
-#      - name: print
-#        run: echo "${{ github.event.pull_request.body }}"
-      - name: All fields properly 
+      - name: print
+        run: echo "${{ github.event.pull_request.body }}"
+      - name: check 
         run: |
           echo "Please fill in all the required fields."
           exit 1
