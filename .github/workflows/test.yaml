@@ -13,3 +13,7 @@ jobs:
     steps:
       - name: print
         run: echo "${{ github.event.pull_request.body }}"
+      - name: throw_error
+        run: |
+          echo "Please fill in all the required fields:
+          exit 1
