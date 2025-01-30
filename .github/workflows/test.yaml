@@ -1,4 +1,4 @@
-name: PR created or updated
+name: Check RAP fields
 
 on:
   pull_request:
