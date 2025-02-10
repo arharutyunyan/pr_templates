@@ -1,5 +1,3 @@
-### Issue Title
-
 ### Business Justification
 
 ### Description of Resolution
