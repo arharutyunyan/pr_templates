@@ -1,6 +1,6 @@
 import markdown_to_json
 
-with open("./test.md", "r") as file:
+with open("./pr_body", "r") as file:
     text = file.read()
     d = markdown_to_json.dictify(text)
     print(d["Issue Title"])
