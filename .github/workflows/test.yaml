@@ -11,9 +11,10 @@ jobs:
       contents: read
       issues: read
     steps:
-      - name: print
-        run: echo "${{ github.event.pull_request.body }}"
-      - name: check 
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: save_body_to_file
+        run: echo "${{ github.event.pull_request.body }}" > pr_body
+      - name: run_script
         run: |
-          echo "Please fill in all the required fields."
-          exit 1
+          python3 main.py
