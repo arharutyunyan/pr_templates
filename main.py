@@ -5,6 +5,7 @@ with open("./pr_body", "r") as file:
     text = file.read()
     d = markdown_to_json.dictify(text)
     for key, value in d.items():
+        print(d[key])
         if type(d[key]) is list:
             continue
         if d[key] is None:
