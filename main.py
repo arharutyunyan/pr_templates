@@ -7,13 +7,13 @@ import re
 # Replace with your Jira URL, email, and API token
 JIRA_URL = os.getenv("JIRA_URL")
 JIRA_EMAIL = os.getenv("JIRA_EMAIL")
-API_TOKEN = os.getenv("JIRA_TOKEN")
+JIRA_API_TOKEN = os.getenv("JIRA_TOKEN")
 
 def check_list(l):
     list_item_chosen = False
     marked_choices = []
     for item in l:
-        m = re.search("\[x\]\s*([a-zA-Z ]*)", item)
+        m = re.search(r"\[x\]\s*([a-zA-Z ]*)", item)
         if m:
             list_item_chosen = True
             marked_choices.append(m.group(1))
