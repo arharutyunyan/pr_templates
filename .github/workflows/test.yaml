@@ -13,10 +13,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+
       - name: install requirements
         run: pip install -r requirements.txt
+
       - name: save body to file
         run: echo "${{ github.event.pull_request.body }}" > pr_body
+
       - name: run script
         run: |
           python main.py
