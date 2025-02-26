@@ -51,7 +51,7 @@ rap_field_ids_by_names = {
 }
 
 # Create a Jira instance
-jira = JIRA(server=JIRA_URL, basic_auth=(JIRA_EMAIL, API_TOKEN))
+jira = JIRA(server=JIRA_URL, basic_auth=(JIRA_EMAIL, JIRA_API_TOKEN))
 
 ticket_fields = {
     "project": {
