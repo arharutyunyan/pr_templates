@@ -9,6 +9,10 @@ JIRA_URL = os.getenv("JIRA_URL")
 JIRA_EMAIL = os.getenv("JIRA_EMAIL")
 JIRA_API_TOKEN = os.getenv("JIRA_TOKEN")
 
+print(JIRA_URL)
+print(JIRA_EMAIL)
+print(JIRA_API_TOKEN)
+
 def check_list(l):
     list_item_chosen = False
     marked_choices = []
