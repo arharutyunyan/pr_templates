@@ -4,11 +4,6 @@
 
 ### Target Release Date
 
-### Release Type
-
-- [ ] Monolith
-- [ ] Microservices
-
 ### What testing did you do? Provide a link to results.
 
 ### Does this have model changes?
