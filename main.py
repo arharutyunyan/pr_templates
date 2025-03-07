@@ -70,3 +70,12 @@ print(ticket_fields)
 
 # Get the issue
 issue = jira.create_issue(fields=ticket_fields)
+
+bug_ticket_key = d["Bug Ticket Key"]
+
+# Create Issue Link
+jira.create_issue_link({
+    "relates to",
+    issue.key,
+    bug_ticket_key
+})
