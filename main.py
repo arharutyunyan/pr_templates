@@ -75,7 +75,7 @@ bug_ticket_key = d["Bug Ticket Key"]
 
 # Create Issue Link
 jira.create_issue_link({
-    "relates to",
-    issue.key,
-    bug_ticket_key
+    "type": {"name": "relates to" },
+    "inwardIssue": { "key": issue.key},
+    "outwardIssue": {"key": bug_ticket_key},
 })
