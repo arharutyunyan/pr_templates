@@ -28,7 +28,7 @@ for key, value in d.items():
     print(key, value)
     if type(d[key]) is list:
         marked, value = check_list(d[key])
-        value = value[0] if len(value) == 1 else value
+#        value = value[0] if len(value) == 1 else value
         if marked:
             d[key] = value
         else:
